@@ -109,7 +109,6 @@
             ({ loading, error, data }) => {
                 if (loading) return <p>Loading...</p>;
                 if (error) return <p>Error :(</p>;
-                console.log(data.posts.edges);
                 
                 const renderPosts = data.posts.edges.map(({ node }) => {
 
