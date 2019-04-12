@@ -49,3 +49,26 @@
             render(<App />, document.getElementById("root"));
 
         ```
+
+
+4. Connect to WP
+
+    - 4.1 Create .env file in project root
+    - 4.2 Add GraphQL API URL as env var: (REACT_APP_ prefix is important)
+    
+    ```bash
+
+    REACT_APP_GRAPHQL_API=http://localhost/pulsar/graphql
+
+
+    ```
+
+    - 4.3 Add env variable to client:
+
+    ```Javascript
+
+    const client = new ApolloClient({
+        uri: process.env.REACT_APP_GRAPHQL_API
+    });
+
+    ```

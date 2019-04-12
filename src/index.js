@@ -6,8 +6,9 @@ import * as serviceWorker from './serviceWorker';
 
 import ApolloClient from "apollo-boost";
 
+
 const client = new ApolloClient({
-uri: "https://48p1r2roz4.sse.codesandbox.io"
+    uri: process.env.REACT_APP_GRAPHQL_API
 });
 
 
